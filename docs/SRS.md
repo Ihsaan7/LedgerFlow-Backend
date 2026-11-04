@@ -78,3 +78,8 @@ an auditable double-entry financial ledger.
 - Currency and monetary precision policy.
 - Idempotency key scope, retention, and behavior for in-flight requests.
 - Specific audit events and data-retention policy.
+- Each organization uses one currency: PKR or USD.
+- Financial amounts are stored as whole minor units: paisa for PKR
+- and cents for USD.
+- Currency conversion is out of scope for v1.
+- An organization's currency must not change after financial activity begins.
