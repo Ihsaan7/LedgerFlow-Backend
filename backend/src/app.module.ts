@@ -9,6 +9,11 @@ import { DatabaseShutdownService } from './database/database-shutdown.service.js
 @Module({
   imports: [ConfigModule.forRoot({isGlobal: true})],
   controllers: [AppController],
-  providers: [AppService, databaseProvider, DatabaseCheckService],
+  providers: [
+    AppService,
+    databaseProvider,
+    DatabaseCheckService,
+    DatabaseShutdownService,
+  ],
 })
 export class AppModule {}
