@@ -35,6 +35,12 @@ an auditable double-entry financial ledger.
   equivalent request must not create a second transaction.
 - Reusing a key with a different request must be rejected.
 - The stored response must be returned for a completed retry.
+- Idempotency keys are scoped to an organization.
+- V1 does not automatically delete idempotency records.
+- A fingerprint must distinguish the HTTP method, operation, and
+  validated request data.
+- Authentication and authorization must happen before a stored
+  response is returned.
 
 ### Audit logging
 - Critical state changes must create append-only audit records.
